@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from os import path
 
 windowName = 'Imagem'
 flagVideo = 0
@@ -65,10 +66,10 @@ def isGray():
 def picture():
     global frame, dispFrame,flagGray
 
-    frame = cv2.imread('foto.jpg',cv2.IMREAD_ANYCOLOR)
+    frame = cv2.imread(source, cv2.IMREAD_ANYCOLOR)
     dispFrame = frame.copy()
     cv2.namedWindow(windowName)
-    cv2.setMouseCallback(windowName,mouseClickCallback)
+    cv2.setMouseCallback(windowName, mouseClickCallback)
 
     if isGray():
         flagGray = 1
@@ -100,8 +101,11 @@ def video():
 
 
 def main():
-    global source, flagImagem
+    global source, flagImagem, basepath
     
+
+    basepath = path.dirname(__file__)
+
     print("Selecione opcao:")
     print("1 - RGB do pixel")
     print("2 - Destaca cor imagem")
@@ -111,12 +115,24 @@ def main():
     print()
 
     if op == '1':
+        grayscale = input("Digite 1 para imagem em escala de cinza ou qualque coisa para imagem colorida: ")
+        if grayscale == '1':
+            filename = "foto_gray.jpg"
+        else:
+            filename = "foto.jpg"
+        source = path.abspath(path.join(basepath, "..", "data", filename))
         picture()
     elif op == '2':
+        grayscale = input("Digite 1 para imagem em escala de cinza ou qualque coisa para imagem colorida: ")
+        if grayscale == '1':
+            filename = "foto_gray.jpg"
+        else:
+            filename = "foto.jpg"
+        source = path.abspath(path.join(basepath, "..", "data", filename))
         flagImagem = 1
         picture()
     elif op == '3':
-        source = 'video.mp4'
+        source = path.abspath(path.join(basepath, "..", "data", "video.mp4"))
         video()
     elif op == '4':
         source = 0
