@@ -1,0 +1,5 @@
+# Referencias
+* Função de callback do mouse: https://stackoverflow.com/questions/28327020/opencv-detect-mouse-position-clicking-over-a-picture
+* Grayscale?: http://answers.opencv.org/question/36288/how-to-know-grayscale-or-color-img-loaded/
+* Distância euclidiana: https://stackoverflow.com/questions/52720989/opencv-is-there-an-alternative-to-cv2-inrange-using-radius
+* Aplicação da máscara: https://stackoverflow.com/questions/50027490/apply-mask-to-image-with-opencv-python
