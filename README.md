@@ -1,14 +1,27 @@
 # Projeto Demonstrativo 1
-# Aluno: Pedro Garcia
-# Matrícula: 15/0019891
+### Aluno: Pedro Garcia
+### Matrícula: 15/0019891
 
-PrimeiroNome_UltimoNome__PrimeiroNome_UltimoNome
-├── read_me.txt (ou README.md)
-├── PrimeiroNome_UltimoNome__PrimeiroNome_UltimoNome.pdf
+* OS: Ubuntu 18.10
+* Versão do Python: 3.7.2
+* Versão do OpenCV: 3.4.5
+
+## Comando para execução
+* Do diretório `src`:
+    - `python3 project.py`
+
+## Arquivos
+* OBS: Optou-se por enviar 2 imagens, uma colorida e outra em escala de cinza, porque o programa oferece ao usuário a opção de escolher qual imagem ele quer abrir.
+```
+Pedro_Garcia
+├── README.md
+├── Pedro_Garcia.pdf
 ├── /relatorio
-│   └── arquivos fontes do LaTeX (sem arquivos gerados automaticamente)
+│   └── arquivos fontes do LaTeX
 ├── /src
-│   └── codigo fonte implementado (sem arquivos compilados)
+│   └── project.py
 └── /data
-    ├── imagem.jpg (somente 1 arquivo)
-    └── video.avi (somente 1 arquivo)
+    ├── foto.jpg
+    ├── foto_gray.jpg
+    └── video.mp4
+```
